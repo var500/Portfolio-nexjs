@@ -27,6 +27,21 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiFirebase,
+  SiTypescript,
+  SiGooglegemini,
+  SiPostgresql,
+  SiReact,
+  SiMongodb,
+  SiWebrtc,
+  SiExpress,
+  SiPython,
+  SiNodedotjs,
+  SiApollographql,
+  SiRedux,
+  SiAwselasticloadbalancing,
+  SiDocker,
+  SiFlask
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -63,6 +78,23 @@ export const iconLibrary: Record<string, IconType> = {
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
+  firebase: SiFirebase,
+  typescript: SiTypescript,
+  genkit: SiGooglegemini,
+  postgresql: SiPostgresql,
+  reactjs: SiReact,
+  mongodb: SiMongodb,
+  webrtc: SiWebrtc,
+  reactnative: SiReact,
+  expressjs: SiExpress,
+  python: SiPython,
+  nodejs: SiNodedotjs,
+  apollo: SiApollographql,
+  redux: SiRedux,
+  aws: SiAwselasticloadbalancing,
+  docker: SiDocker,
+  flask: SiFlask,
+  git: FaGithub,
 };
 
 export type IconLibrary = typeof iconLibrary;
