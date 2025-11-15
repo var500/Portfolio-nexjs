@@ -175,6 +175,8 @@ export interface About extends BasePageConfig {
       name: string;
       /** Description of studies */
       description: React.ReactNode;
+      /** Cumulative GPA */
+      cgpa: string;
     }>;
   };
   /** Technical skills section */
@@ -187,9 +189,6 @@ export interface About extends BasePageConfig {
     skills: Array<{
       /** Skill title */
       title: string;
-      /** Skill description */
-      description?: React.ReactNode;
-      /** Skill tags */
       tags?: Array<{
         name: string;
         icon?: string;
@@ -207,6 +206,12 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
+  Others:{
+    display: boolean;
+    title: string;
+    description: React.ReactNode;
+    link: string;
+  }
 }
 
 /**

@@ -1,15 +1,15 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
-import { Line, Logo, Row, Text } from "@once-ui-system/core";
+import { About, Home, Newsletter, Person, Social, Work } from "@/types";
+import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Varun",
+  lastName: "Chodha",
+  name: `Varun Chodha`,
+  role: "Senior Software Developer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "varun5chodha@gmail.com",
+  location: "Asia/Kolkata",
+  languages: ["English", "Hindi"],
 };
 
 const newsletter: Newsletter = {
@@ -24,17 +24,12 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/var500",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/varunchodha/",
   },
   {
     name: "Email",
@@ -65,13 +60,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
-      <Logo
-        dark
-        icon="/trademarks/wordmark-dark.svg"
-        style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
-      />
-      , where I craft intuitive
+      I'm Varun, a Senior Fullstack Developer , where I craft intuitive
       <br /> user experiences. After hours, I build my own projects.
     </>
   ),
@@ -90,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -98,9 +87,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Varun is a India-based software engineer with a passion for transforming
+        complex challenges into simple, elegant solutions. His work spans
+        developing fullstack solutions, interactive experiences, and the
+        convergence of design and technology.
       </>
     ),
   },
@@ -109,41 +99,84 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Mersive Technologies",
+        timeframe: "Nov 2024 - Present",
+        role: "Senior Software Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed a real-time video conferencing solution using WebRTC and
+            React Native, reducing latency by 40% and improving video call
+            stability for 10,000+ users.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Optimized video streaming performance by engineering scalable
+            microservices with Firebase and WebRTC
+          </>,
+          <>
+            Implemented microservice architecture and CI/CD pipelines, reducing
+            deployment time by 50% and ensuring 99.9% uptime for real-time
+            communication services.
+          </>,
+          <>
+            Built and notarized custom macOS PKG installers for a hybrid meeting
+            feature using open-source software, with code signing via Apple
+            Developer ID certificates.
+          </>,
+          <>
+            Developed a Python Flask-based executable running as a Windows
+            background agent (registered as a scheduled task) to listen for and
+            handle requests on a dedicated port
           </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "Mersive Project",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Nonceblox Pvt Ltd",
+        timeframe: "April 2023 - Jan 2024",
+        role: "Software Associate",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Built web applications using the MERN stack, resulting 20%
+            improvement in page load time
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Collaborated with UI/UX designers and cross-functional teams to
+            develop and optimize user-friendly interfaces using Next.js,
+            improving user engagement by 30%.
+          </>,
+          <>
+            Designed and sustained RESTful APIs using Express.js and Nest.js,
+            reducing latency, enhancing efficiency.
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Stable (Freelance)",
+        timeframe: "Jan 2023 - Nov 2023",
+        role: "Backend Developer",
+        achievements: [
+          <>
+            Ensured seamless integration of fullstack applications, reducing
+            integration-related bugs by 20%
+          </>,
+          <>
+            Enhanced server-side application performance by 15% using Nest.js,
+            and implemented OAuth-based user authenti- cation, improving
+            security and user experience
+          </>,
+          <>
+            Successfully integrated MongoDB databases, optimizing data storage
+            and retrieval process, resulting in 30% reduc- tion in data access
+            time
           </>,
         ],
         images: [],
@@ -152,57 +185,37 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
-      },
-      {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Jaypee University of Information Technology, Solan",
+        description: (
+          <div>
+            <p>B.Tech (Hons.) in Information Technology</p>
+            <p>With Minors in Information Security</p>
+          </div>
+        ),
+        cgpa: "8.76",
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "Technial Skills",
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Data Structures & Algorithms",
+            icon: "dsa",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Typescript",
+            icon: "typescript",
           },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
-        tags: [
           {
-            name: "JavaScript",
+            name: "Javascript",
             icon: "javascript",
           },
           {
@@ -210,31 +223,116 @@ const about: About = {
             icon: "nextjs",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "React.js",
+            icon: "reactjs",
+          },
+          {
+            name: "Firebase",
+            icon: "firebase",
+          },
+          {
+            name: "MongoDB",
+            icon: "mongodb",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgresql",
+          },
+          {
+            name: "GraphQL",
+            icon: "genkit",
+          },
+          {
+            name: "Genkit",
+            icon: "genkit",
+          },
+          {
+            name: "WebRTC",
+            icon: "webrtc",
+          },
+          {
+            name: "React Native",
+            icon: "reactnative",
+          },
+          {
+            name: "Apollo Client",
+            icon: "apollo",
+          },
+          {
+            name: "Redux",
+            icon: "redux",
+          },
+          {
+            name: "WebSocket",
+            icon: "websocket",
+          },
+          {
+            name: "Node.js",
+            icon: "nodejs",
+          },
+          {
+            name: "Express.js",
+            icon: "expressjs",
+          },
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "Flask",
+            icon: "flask",
+          },
+          {
+            name: "Git/Github",
+            icon: "git",
+          },
+          {
+            name: "Docker",
+            icon: "docker",
+          },
+          {
+            name: "AWS",
+            icon: "aws",
           },
         ],
         // optional: leave the array empty if you don't want to display images
-        images: [
+        images: [],
+      },
+      {
+        title: "Soft Skills",
+        tags: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Leadership",
+          },
+          {
+            name: "Ownership",
+          },
+          {
+            name: "Communication",
+          },
+          {
+            name: "Presentation",
+          },
+          {
+            name: "Teamwork",
           },
         ],
-      },  
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
     ],
   },
-};
-
-const blog: Blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+  Others: {
+    display: true,
+    title: "Research Paper",
+    description: (
+      <>
+        "An ensemble learning–based experimental framework for smart landslide
+        detection, monitoring, prediction, and warning in IoT-cloud environment"
+      </>
+    ),
+    link: "https://link.springer.com/article/10.1007/s11356-023-30683-6",
+  },
 };
 
 const work: Work = {
@@ -246,55 +344,4 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
-const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, work };
