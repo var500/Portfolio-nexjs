@@ -118,6 +118,13 @@ export interface About extends BasePageConfig {
     /** Whether to display the avatar */
     display: boolean;
   };
+  hobbies: {
+    display: boolean;
+    items: Array<{
+      name: string;
+      icon: IconName;
+    }>;
+  };
   /** Calendar section configuration */
   calendar: {
     /** Whether to display the calendar */
@@ -206,12 +213,12 @@ export interface About extends BasePageConfig {
       }>;
     }>;
   };
-  Others:{
+  Others: {
     display: boolean;
     title: string;
     description: React.ReactNode;
     link: string;
-  }
+  };
 }
 
 /**

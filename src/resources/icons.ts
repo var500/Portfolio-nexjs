@@ -41,10 +41,28 @@ import {
   SiRedux,
   SiAwselasticloadbalancing,
   SiDocker,
-  SiFlask
+  SiFlask,
+  SiSocialblade,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import {
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+  FaX,
+  FaThreads,
+  FaXTwitter,
+  FaFacebook,
+  FaPinterest,
+  FaWhatsapp,
+  FaReddit,
+  FaTelegram,
+  FaFootball,
+} from "react-icons/fa6";
+import { BiFoodMenu, BiLaptop } from "react-icons/bi";
+import { TbTrekking } from "react-icons/tb";
+import { MdTravelExplore } from "react-icons/md";
+import { FcCandleSticks } from "react-icons/fc";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -57,7 +75,13 @@ export const iconLibrary: Record<string, IconType> = {
   openLink: HiOutlineLink,
   calendar: HiCalendarDays,
   home: PiHouseDuotone,
+  sports: FaFootball,
+  food: BiFoodMenu,
+  treking: TbTrekking,
+  travel: MdTravelExplore,
+  code: BiLaptop,
   gallery: PiImageDuotone,
+  stocks: FcCandleSticks,
   discord: FaDiscord,
   eye: HiOutlineEye,
   eyeOff: HiOutlineEyeSlash,

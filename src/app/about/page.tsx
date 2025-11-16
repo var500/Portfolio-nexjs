@@ -113,8 +113,29 @@ export default function About() {
                 ))}
               </Row>
             )}
+            {about.hobbies.display && (
+              <>
+                <Heading as="h3" variant="heading-strong-m">
+                  Hobbies
+                </Heading>
+                {about.hobbies.items && about.hobbies.items.length > 0 && (
+                  <Row wrap gap="8" paddingTop="8">
+                    {about.hobbies.items.map((tag, tagIndex) => (
+                      <Tag
+                        key={`${about.hobbies.items}-${tagIndex}`}
+                        size="l"
+                        prefixIcon={tag.icon}
+                      >
+                        {tag.name}
+                      </Tag>
+                    ))}
+                  </Row>
+                )}
+              </>
+            )}
           </Column>
         )}
+
         <Column className={styles.blockAlign} flex={9} maxWidth={40}>
           <Column
             id={about.intro.title}

@@ -78,6 +78,35 @@ const about: About = {
   avatar: {
     display: true,
   },
+  hobbies: {
+    display: true,
+    items: [
+      {
+        name: "Foodie",
+        icon: "food",
+      },
+      {
+        name: "Traveling",
+        icon: "traveling",
+      },
+      {
+        name: "Trekking",
+        icon: "treking",
+      },
+      {
+        name: "Coding",
+        icon: "code",
+      },
+      {
+        name: "Sports",
+        icon: "sports",
+      },
+      {
+        name: "Stock Market",
+        icon: "stocks",
+      },
+    ],
+  },
   calendar: {
     display: false,
     link: "https://cal.com",
