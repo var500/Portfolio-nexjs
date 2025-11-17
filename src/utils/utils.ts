@@ -14,10 +14,11 @@ type Metadata = {
   publishedAt: string;
   summary: string;
   image?: string;
-  images: string[];
+  media: string[];
   tag?: string;
   team: Team[];
   link?: string;
+  video?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -43,10 +44,11 @@ function readMDXFile(filePath: string) {
     publishedAt: data.publishedAt,
     summary: data.summary || "",
     image: data.image || "",
-    images: data.images || [],
+    media: data.media || [],
     tag: data.tag || [],
     team: data.team || [],
     link: data.link || "",
+    video: data.video || "",
   };
 
   return { metadata, content };

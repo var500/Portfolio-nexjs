@@ -13,30 +13,33 @@ import {
 interface ProjectCardProps {
   href: string;
   priority?: boolean;
-  images: string[];
+  media: string[];
   title: string;
   content: string;
   description: string;
   avatars: { src: string }[];
   link: string;
+  video: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
-  images = [],
+  media = [],
   title,
   content,
   description,
   avatars,
   link,
+  video,
 }) => {
   return (
     <Column fillWidth gap="m">
       <Carousel
         sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
+        items={media.map((item) => ({
+          slide: item,
           alt: title,
+          isVideo: item.endsWith(".mp4") || item.endsWith(".webm"),
         }))}
       />
       <Flex
@@ -56,9 +59,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         )}
         {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
           <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+            {avatars?.length > 0 && (
+              <AvatarGroup avatars={avatars} size="m" reverse />
+            )}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text
+                wrap="balance"
+                variant="body-default-s"
+                onBackground="neutral-weak"
+              >
                 {description}
               </Text>
             )}
@@ -79,6 +88,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   href={link}
                 >
                   <Text variant="body-default-s">View project</Text>
+                </SmartLink>
+              )}
+              {video && (
+                <SmartLink
+                  suffixIcon="arrowUpRightFromSquare"
+                  style={{ margin: "0", width: "fit-content" }}
+                  href={video}
+                >
+                  <Text variant="body-default-s">View Demo</Text>
                 </SmartLink>
               )}
             </Flex>

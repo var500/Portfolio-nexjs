@@ -1,0 +1,43 @@
+---
+title: "AI Agile Engineer: An Autonomous Software Engineering Agent"
+publishedAt: "2025-11-10"
+summary: "An autonomous AI agent designed to understand Jira tickets, generate production-ready code, and automate the pull request process using Genkit and Google's Gemini models."
+media:
+  - "/images/projects/project-01/cover-02.jpg"
+  - "/videos/ai-project-01.mp4"
+team:
+  - name: "AI Studio Developer"
+    role: "Lead AI/Software Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/varunchodha"
+video: "https://drive.google.com/file/d/1ynac_9T94_undPgTLUmYaA_pwtkvNC4g/view?usp=sharing"
+---
+
+## Overview
+
+In this project, I developed an autonomous AI software engineer capable of handling the end-to-end development lifecycle for small engineering tasks. The primary goal was to create an intelligent agent that can sync with project management tools like Jira, understand ticket requirements, generate code, and submit pull requests on GitHub with minimal human intervention. This solution leverages Genkit for orchestrating AI workflows and Google's Gemini models for reasoning and code generation, significantly reducing the manual effort required for routine development tasks.
+
+## Key Features
+
+- **Jira Integration**: The agent automatically syncs with a specified Jira project, fetching tickets that are in the "To Do" state and assigned to it, bringing them into its own task management dashboard.
+- **AI-Powered Ticket Validation**: Using Genkit and Gemini, the agent analyzes a ticket's description and acceptance criteria to determine if it has sufficient information to begin work. If not, it generates clarifying questions for the user to answer.
+- **Automated Code Generation**: Once a ticket is validated, the agent reads the relevant repository and files to generate clean, production-ready code that addresses the ticket's requirements.
+- **Automated Pull Request Creation**: The agent creates a new branch, commits the generated code, pushes it to GitHub, and then uses the GitHub API to open a pull request. It even uses AI to generate a concise and descriptive PR summary based on the code changes.
+- **State Management & UI**: A Next.js and Firebase-powered dashboard provides real-time visibility into the agent's status—from `VALIDATING` and `CODING` to `SUCCESS`—and allows for seamless interaction, such as answering the AI's questions or providing repository configurations.
+
+## Technologies Used
+
+- **Genkit & Google Gemini**: For orchestrating multi-step AI flows, ticket validation, code generation, and PR description creation.
+- **Next.js & React**: For building the interactive front-end dashboard and server-side actions.
+- **Firebase (Firestore)**: For robust, real-time state management of tickets and project configurations.
+- **Jira API**: To fetch project and ticket data directly from the project management tool.
+- **GitHub API & simple-git**: For programmatically cloning repositories, committing code, and creating pull requests.
+- **ShadCN UI & Tailwind CSS**: To build a clean, modern, and responsive user interface.
+
+## Challenges and Learnings
+
+A significant challenge was ensuring the AI could reliably interpret the natural language of a Jira ticket and translate it into correct, functional code within the context of an existing codebase. This required careful prompt engineering and a structured, multi-step flow where the AI validates its understanding before proceeding. Another challenge was creating a robust Git workflow on the server, including handling authentication, temporary file management, and error recovery during the PR creation process.
+
+## Outcome
+
+The AI Agile Engineer successfully automates the development process for well-defined tasks. It serves as a powerful proof-of-concept demonstrating how modern AI orchestration tools like Genkit can be used to build sophisticated agents that augment engineering teams. The project has drastically reduced the turnaround time for small bug fixes and feature requests, allowing human developers to focus on more complex, high-level architectural challenges.
