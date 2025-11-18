@@ -1,0 +1,50 @@
+---
+title: "Housezy - Comprehensive Home Maintenance Platform"
+publishedAt: "2024-07-01"
+summary: "A dual-interface ecosystem featuring a cross-platform mobile app for booking household services and a robust admin dashboard for vendor and quota management."
+media:
+  - "/images/projects/project-02/cover-01.jpg"
+team:
+  - name: "Varun Chodha"
+    role: "Full Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/varunchodha"
+---
+
+## Overview
+
+Housezy is a "one-stop" solution designed to modernize how homeowners access maintenance services. The project required a cohesive ecosystem consisting of two major components: a consumer-facing mobile application and a centralized Admin Dashboard for operations.
+
+My role involved end-to-end development on the **Expo (React Native)** mobile app, ensuring a smooth booking experience, while simultaneously building the **Admin Dashboard** to manage vendor logistics, track service quality, and handle financial transactions.
+
+## Key Features
+
+- **Hybrid Ecosystem**:
+  - **Consumer App**: A cross-platform React Native (Expo) app allowing users to browse and book services like tank cleaning, sofa cleaning, plumbing, and electrical repairs.
+  - **Admin Console**: A comprehensive web dashboard for platform administrators to monitor total bookings, revenue stats, and active user data.
+- **Secure Service Handshake (Twilio OTP)**: Implemented a strict two-step verification protocol to ensure service integrity.
+  - **On Arrival**: A unique OTP is generated when the vendor reaches the location to validate attendance.
+  - **On Completion**: A final OTP verification is required to close the ticket, ensuring the service is actually delivered before quota deduction.
+- **Smart Subscription & Quota Logic**: Engineered a complex package consumption system. Users purchase subscription plans with specific service quotas (e.g., _"Gold Plan: 2 Tank Cleans + 5 Plumbing Visits"_). The system automatically tracks usage, prevents over-booking, and manages renewals.
+- **Reputation Management System**: Built a comprehensive feedback loop allowing users and vendors to rate each other post-service. This data feeds into the Admin Dashboard to calculate average vendor ratings and flag performance issues.
+- **Vendor Orchestration**: Built workflows within the Admin Dashboard to manually or automatically assign specific vendors to incoming bookings based on availability and service type.
+
+## Technologies Used
+
+- **React Native (Expo)**: For rapid development and deployment of the consumer mobile application on iOS and Android.
+- **React.js (Admin Panel)**: For building a responsive and interactive management dashboard.
+- **GraphQL**: Utilized for efficient data fetching, specifically for complex queries involving user quotas and real-time mutations for booking status updates.
+- **Twilio API**: Integrated for real-time SMS delivery and OTP verification flows at critical service milestones.
+- **Node.js**: Backend services handling the business logic for package limits, vendor assignment, and rating aggregation.
+
+## Challenges and Learnings
+
+**Managing Service State & Integrity:**
+A key challenge was ensuring the "proof of service." By integrating Twilio, I created a state machine for bookings (Pending -> Assigned -> Arrived -> Completed) where transitions required cryptographic verification (OTP). This eliminated disputes regarding whether a vendor actually visited the site.
+
+**Complex Quota Management:**
+Designing the database schema to handle the "Quota System" was complex. Unlike simple e-commerce, this required tracking the _state_ of a subscription (e.g., knowing a user has used 1 of 3 sofa cleanings). I utilized GraphQL mutations to ensure atomic updates to these quotas to prevent concurrency issues.
+
+## Outcome
+
+The Housezy platform successfully centralized fragmented home services into a single digital workflow. The integration of OTP verification significantly reduced service disputes, while the quota system enabled a recurring revenue model that was transparent for users and manageable for the business.

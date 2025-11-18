@@ -13,7 +13,7 @@ const person: Person = {
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -44,7 +44,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building Beyond the Browser</>,
   featured: {
     display: true,
     title: (
@@ -56,12 +56,14 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/ai-agile-engineer",
   },
   subline: (
     <>
-      I'm Varun, a Senior Fullstack Developer , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I’m Varun, a Senior Full Stack Engineer. I architect high-performance web
+      applications and system-level software,
+      <br />
+      bridging the gap between complex backends and fluid user experiences
     </>
   ),
 };

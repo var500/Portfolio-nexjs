@@ -17,13 +17,22 @@ import { Footer, Header, RouteGuard, Providers } from "@/components";
 import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
 
 export async function generateMetadata() {
-  return Meta.generate({
+  const metadata = Meta.generate({
     title: home.title,
     description: home.description,
     baseURL: baseURL,
     path: home.path,
     image: home.image,
   });
+
+  // 2. Return the metadata combined with your custom icons
+  return {
+    ...metadata,
+    icons: {
+      icon: "/images/favicon.png", // Ensure this file exists in public/images/
+      shortcut: "/images/favicon.png",
+    },
+  };
 }
 
 export default async function RootLayout({
@@ -41,7 +50,7 @@ export default async function RootLayout({
         fonts.heading.variable,
         fonts.body.variable,
         fonts.label.variable,
-        fonts.code.variable,
+        fonts.code.variable
       )}
     >
       <head>

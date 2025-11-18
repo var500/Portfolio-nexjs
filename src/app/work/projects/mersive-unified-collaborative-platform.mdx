@@ -1,0 +1,54 @@
+---
+title: "Mersive Solstice - Unified Collaboration Platform"
+publishedAt: "2024-11-15"
+summary: "Architecting the next generation of workplace collaboration by integrating Wireless Screen Sharing, Hybrid Meeting support, Digital Signage, and intelligent AV Routing into a single high-performance platform."
+media:
+  - "/images/projects/project-03/cover-01.jpg"
+  - "/images/projects/project-03/cover-02.jpg"
+team:
+  - name: "Varun Chodha"
+    role: "Senior Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/varunchodha"
+---
+
+## Overview
+
+Mersive Solstice is a market-leading platform that transforms meeting spaces into intelligent collaboration hubs. It is not just about screen sharing; it is a comprehensive operating system for the meeting room.
+
+As a Senior Developer, I drive the engineering behind the platform's core capabilities on macOS and the cloud. My role focuses on the convergence of **Wireless Screen Sharing** and **Hybrid Meetings**, ensuring that users can seamlessly share content and connect to remote participants without grappling with cables or complex AV setups.
+
+## Key Features
+
+- **Wireless Screen Sharing & AV Routing**:
+  - Engineered the core logic for high-performance wireless content sharing, allowing multiple users to stream 4K content simultaneously from any device.
+  - Implemented intelligent **AV Routing** algorithms within the local Python daemon to dynamically manage audio/video signal paths, automatically switching between local HDMI inputs and wireless streams based on active user context.
+- **Hybrid Meeting (BYOM) Support**:
+  - Built the "Bring Your Own Meeting" architecture using **WebRTC** and **React Native**. This allows users to wirelessly connect the room’s camera and audio peripherals to their laptop, bridging the gap between the physical room and remote platforms like Zoom or Teams.
+- **Digital Signage Integration**:
+  - Developed features that maximize hardware ROI by converting idle meeting displays into **Digital Signage** endpoints. Integrated HTML5-based playback engines to render corporate communications, dashboards, or emergency alerts when the room is not in active use.
+- **System-Level macOS Integration**:
+  - Created custom **PKG and DMG** installers and managed Apple Notarization to ensure the Solstice client has the deep OS permissions required to capture screens and route system audio securely.
+- **Cloud Management & Analytics**:
+  - Scaled the backend microservices (Node.js/Firebase) to support fleet management, allowing administrators to configure Digital Signage feeds and monitor AV routing health across thousands of deployed units.
+
+## Technologies Used
+
+- **React Native**: For the unified user interface across user devices and room displays.
+- **WebRTC**: The backbone for low-latency Hybrid Meeting streaming.
+- **Python (Flask/Daemon)**: For handling local **AV Routing** logic and hardware communication.
+- **HTML5/Canvas**: For rendering Digital Signage content.
+- **macOS Shell/Scripting**: For custom packaging and security compliance.
+- **Firebase & Node.js**: For backend configuration and signaling.
+
+## Challenges and Learnings
+
+**Complex Signal Routing:**
+One of the toughest technical hurdles was the **AV Routing** logic. Managing the state machine to switch between a physical HDMI cable plug-in, a wireless AirPlay stream, and a digital signage feed—without crashing the audio driver—required robust error handling and race-condition management in the Python layer.
+
+**Optimizing Hybrid Latency:**
+For **Hybrid Meetings**, ensuring that the room camera feed reached the user's laptop wirelessly with minimal delay was critical. I optimized the WebRTC media constraints and buffer handling to reduce latency by **40%**, ensuring lip-sync remained accurate during calls.
+
+## Outcome
+
+The Solstice platform now serves as a comprehensive room engine. The introduction of robust **AV Routing** and **Digital Signage** has transformed the product from a simple presentation tool into a critical enterprise asset, increasing device utilization uptime by over 30% for our clients.
