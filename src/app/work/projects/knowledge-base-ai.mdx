@@ -1,0 +1,48 @@
+---
+title: "Knowledge Base AI (Production-Grade RAG Pipeline)"
+publishedAt: "2026-05-28"
+summary: "A full-stack Retrieval-Augmented Generation (RAG) application built with Next.js 16, pgvector, Drizzle ORM, and Vercel AI SDK v6."
+media:
+  - "/images/projects/project-04/cover-01.png"
+team:
+  - name: "Varun Chodha"
+    role: "AI & Full Stack Engineer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: "https://www.linkedin.com/in/varunchodha"
+---
+
+## Overview
+
+Knowledge Base AI is a production-grade **Retrieval-Augmented Generation (RAG)** application designed to solve the challenges of hallucination, lack of source attribution, and slow response times in AI-driven document assistants. The goal was to build a highly interactive, end-to-end RAG playground that allows users to visualize and understand every phase of a modern cognitive search pipeline—from raw text chunking and vector storage to similarity search and context-grounded streaming.
+
+Built with Next.js 16, pgvector, and the Vercel AI SDK, this platform functions as both an educational playground and a robust base for production document search engines.
+
+## Key Features
+
+- **Dynamic RAG Stage Visualizer**: An interactive visual pipeline that animates in real-time as a user query progresses through the system (Embed → Search → Inject → Stream), making the abstract concepts of vector search tangible.
+- **In-Memory Embeddings Playground**: Features sliding boundary controls to interactively segment article templates, displaying a real-time visualization of 1,536-dimensional float coordinates mapped to a 384-cell glowing heat grid, alongside cosine similarity and vector dot product calculations.
+- **Database Vector Search Console**: An interface to query stored document chunks from a PostgreSQL database with Supabase. It ranks results using pgvector's `<=>` similarity operator and provides educational raw SQL query explainers.
+- **Grounded Chat with Citation Cards**: A premium chat interface that streams grounded answers to users. It enforces strict context boundary guardrails and highlights the exact document chunks and similarity scores backing each statement using source citation cards.
+- **Drag-and-Drop Ingestion Pipeline**: Users can drag and drop Markdown or text files to chunk, embed, and store document segments programmatically.
+
+## Technologies Used
+
+- **Next.js 16 (Turbopack) & React 19**: Core framework for building a high-performance, single-page application experience with server actions.
+- **Vercel AI SDK v6**: For handling streaming text generation and structured AI interactions.
+- **OpenAI API**: Leveraging `text-embedding-3-small` (1,536 dimensions) for dense vector generation and `gpt-4o-mini` for response generation.
+- **PostgreSQL & pgvector (Supabase)**: For robust vector database indexing, storage, and cosine distance queries.
+- **Drizzle ORM & postgres.js**: Object-relational mapping and high-speed query driver.
+- **js-tiktoken**: Character and token-based chunking configuration using the `cl100k_base` encoder.
+- **Tailwind CSS & Vanilla CSS**: Modern, responsive design system utilizing dark mode glows, frosted glass cards, and smooth micro-animations.
+
+## Challenges and Learnings
+
+**Optimizing Chunking Strategies:**
+Creating the perfect chunks required handling both token limitations and semantic coherence. Using `js-tiktoken`, I implemented custom token-based chunking that allows users to adjust size and overlap dynamically. This ensures that the context injected into the LLM is both dense and highly relevant.
+
+**Real-Time Pipeline Visualization:**
+Designing a UI that visually reflects the asynchronous backend states of embedding, searching, and streaming was challenging. By leveraging Server Actions and React 19's streaming capabilities, I created a real-time stage visualizer that updates instantly as each backend step finishes.
+
+## Outcome
+
+The resulting Knowledge Base AI platform successfully bridges the gap between complex machine learning workflows and interactive user interfaces. It serves as a comprehensive case study for building grounded AI systems, demonstrating how to build a performant, cost-effective RAG pipeline that eliminates hallucination through precise vector retrieval and clear source citation.
